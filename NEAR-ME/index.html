@@ -25,7 +25,7 @@
     <!--Icon-->
     <link
       rel="icon"
-      href="public/images/soulsystemlogo.jpg"
+      href="public/images/near-me-app-image.png"
       type="image/x-icon"
     />
 
@@ -85,10 +85,58 @@
   <body>
     <main>
       <!--login part-->
-      <section></section>
+      <section id="login-part">
+
+        <section id="app-image">
+          <div class=""><img src="public/images/near-me-app-image.png" alt="App-Logo"></div>
+          <div class="app-name"><span>NEAR-ME</span></div>
+        </section>
+        
+        <div>
+          <p>Welcome to Near-Me News!</p><br>
+
+          <p>Please fill in the requested information to enjoy an enhanced user experience on the platform.</p>
+
+        </div>
+
+        <div>
+          <form action="src/recieved.html" method="get">
+
+            <label for="firstname"></label>
+            <input type="text" id="firstname" name="firstname" required placeholder="Eg:Kingsley">
+
+            <label for="country"></label>
+            <input type="text" id="country" name="country" placeholder="Eg:Ghana">
+
+            <button>Get Feed</button>
+          </form>
+        </div>
+
+
+      </section>
 
       <!--information part-->
-      <section></section>
+      <section id="information-part" >
+          <h2 class="text-4xl">Stay in the Know  Wherever You Are!</h2><br>
+          <p>“Near-Me News brings real-time, location-based updates straight to your screen. Personalize your feed and see what's
+          happening in your area, every day.”</p>
+
+          <div>
+            <img src="public/images/Acheampong-kingsley.jpeg" alt="Acheampong-Kingsley">
+            <p>Achampong Kings|CEO SoulSync Systems</p>
+          </div>
+
+          <div>
+            <p>JOIN US</p>
+
+            <div>
+              <img src="public/images/instagram_logo.webp" alt="instagram_logo">
+              <img src="public/images/twitter.png" alt="twitter">
+              <img src="public/images/github-64.webp" alt="github">
+              <img src="public/images/linkdln.webp" alt="linkdln">
+            </div>
+          </div>
+      </section>
     </main>
   </body>
 </html>

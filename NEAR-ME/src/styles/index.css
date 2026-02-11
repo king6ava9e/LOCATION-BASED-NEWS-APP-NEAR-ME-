@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "login-part information-part ";
+}
+
+#information-part{
+    grid-area: information-part;
+}
+
+#login-part{
+    grid-area: login-part;
+}
