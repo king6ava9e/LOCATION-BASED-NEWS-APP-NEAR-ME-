@@ -76,32 +76,30 @@
     <!--CSS-->
     <script src="src/scripts/index.js" defer></script>
     <!--JavaScript-->
-    <link rel="stylesheet" crossorigin href="/assets/index-C9IFVnZM.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-DkT9eaCl.css">
   </head>
   <body>
     <main>
       <!--login part-->
       <section id="login-part">
         <section id="app-image">
-          <div class="">
+          <div class="app-logo">
             <img src="images/near-me-app-image.png" alt="App-Logo" />
           </div>
           <div class="app-name"><span>NEAR-ME</span></div>
         </section>
+        <br /><br /><br />
+
+        <p class="welcome-message">Welcome to Near-Me News!</p>
+
+        <p class="order">
+          Please fill in the requested information to enjoy an enhanced user
+          experience on the platform.
+        </p>
 
         <div>
-          <p>Welcome to Near-Me News!</p>
-          <br />
-
-          <p>
-            Please fill in the requested information to enjoy an enhanced user
-            experience on the platform.
-          </p>
-        </div>
-
-        <div>
-          <form action="src/recieved.html" method="get">
-            <label for="firstname"></label>
+          <form id="feedForm" action="src/recieved.html" method="get">
+            <label for="firstname">Firstname</label>
             <input
               type="text"
               id="firstname"
@@ -110,7 +108,7 @@
               placeholder="Eg:Kingsley"
             />
 
-            <label for="country"></label>
+            <label for="country"> Country</label>
             <input
               type="text"
               id="country"
@@ -122,6 +120,7 @@
           </form>
         </div>
       </section>
+      <br /><br />
 
       <!--information part-->
       <section id="information-part">
