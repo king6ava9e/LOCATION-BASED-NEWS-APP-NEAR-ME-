@@ -8,19 +8,7 @@
 
 /*media query for large screens that the main section will use*/
 main {
-  @media (min-width: 720px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "login-part information-part ";
-  }
-
-  #information-part {
-    grid-area: information-part;
-  }
-
-  #login-part {
-    grid-area: login-part;
-  }
+ 
 }
 
 /* media queries for small screen that the main section will use*/
@@ -34,6 +22,20 @@ main {
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+  @media (min-width: 650px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "login-part information-part ";
+    }
+  
+    #information-part {
+      grid-area: information-part;
+    }
+  
+    #login-part {
+      grid-area: login-part;
+    }
 }
 
 /*LOGIN PART SECTION*/
@@ -210,4 +212,30 @@ button:active {
 #information-part {
   background-color: #4c1d95;
   color: white;
+}
+
+.information-headline{
+  font-size: x-large;
+  font-weight: 800;
+  margin: 0.6rem;
+}
+
+.information-paragraph{
+  font-size: large;
+  line-height: 1.6;
+  margin: 0.5rem;
+  
+}
+
+.profile-image{
+  margin: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  
+}
+
+.profile-writing{
+  white-space: normal;
+  flex: 1;
 }
