@@ -8,7 +8,6 @@
 
 /*media query for large screens that the main section will use*/
 main {
- 
 }
 
 /* media queries for small screen that the main section will use*/
@@ -24,18 +23,18 @@ main {
   margin-bottom: 1rem;
 
   @media (min-width: 650px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "login-part information-part ";
-    }
-  
-    #information-part {
-      grid-area: information-part;
-    }
-  
-    #login-part {
-      grid-area: login-part;
-    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "login-part information-part ";
+  }
+
+  #information-part {
+    grid-area: information-part;
+  }
+
+  #login-part {
+    grid-area: login-part;
+  }
 }
 
 /*LOGIN PART SECTION*/
@@ -214,28 +213,40 @@ button:active {
   color: white;
 }
 
-.information-headline{
+.information-headline {
   font-size: x-large;
   font-weight: 800;
   margin: 0.6rem;
 }
 
-.information-paragraph{
+.information-paragraph {
   font-size: large;
   line-height: 1.6;
   margin: 0.5rem;
-  
 }
 
-.profile-image{
+.profile-image {
   margin: 0.5rem;
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  
 }
 
-.profile-writing{
+.profile-writing {
   white-space: normal;
   flex: 1;
+}
+
+.text-join {
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0.3rem;
+  text-decoration: underline;
+}
+
+.footer-images {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.3rem;
+  margin-bottom: 0.3rem;
 }
