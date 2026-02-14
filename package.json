@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://king6ava9e.github.io/LOCATION-BASED-NEWS-APP-NEAR-ME-",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -11,12 +12,15 @@
     "build": "npx --no-install vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
+    "gh-pages": "^6.3.0",
     "globals": "^17.3.0",
     "prettier": "^3.8.1",
     "vite": "^7.3.1"
