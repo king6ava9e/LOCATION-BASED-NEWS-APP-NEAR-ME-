@@ -3,13 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styles/index.css" />
+
+    <title>Near-Me News | Personalised Feed</title>
+
+    <meta
+      name="description"
+      content="Your personalised Near-Me News dashboard based on your location preferences."
+    />
+
+    <meta name="author" content="Acheampong Kingsley" />
+
+    <link
+      rel="icon"
+      href="/public/images/near-me-app-image.png"
+      type="image/x-icon"
+    />
+
+    <!-- <link rel="stylesheet" href="styles/index.css" /> -->
+    <link rel="stylesheet" href="styles/recieved.css" />
   </head>
   <body>
-    <div>
-      <h1 class="bg-amber-500 text-center">hello world</h1>
-    </div>
+    <header id="header" class="news-heading">NEAR-ME NEWS</header>
+    <p class="news-hype">Stay informed, Stay ahead!</p>
+    <br /><br />
+    <main id="main">
+      <img
+        class="image-to-edit"
+        src="/public/images/near-me-app-image.png"
+        alt="App-logo"
+      />
+
+      <div class="results" id="results-info"></div>
+      <br />
+
+      <form action="main.html">
+        <button class="button-to-edit" type="submit">
+          Continue to Dashboard
+        </button>
+      </form>
+    </main>
+
+    <script type="module" src="scripts/recieved.js"></script>
   </body>
 </html>

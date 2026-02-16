@@ -1,11 +1,9 @@
 {
   "name": "near-me",
+  "homepage": "https://king6ava9e.github.io/LOCATION-BASED-NEWS-APP-NEAR-ME",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
-  // "homepage": "https://king6ava9e.github.io/LOCATION-BASED-NEWS-APP-NEAR-ME",
-
   "engines": {
     "node": ">=18.0.0"
   },

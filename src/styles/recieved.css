@@ -1,1 +1,110 @@
 @import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  margin: 0 auto;
+  background-color: #5b21b6;
+  color: white;
+  justify-content: center;
+  font-weight: 800;
+  font-size: x-large;
+  padding: 1.5rem;
+  font-style: italic;
+  border-bottom: 3px solid orangered;
+}
+
+.news-hype {
+  display: flex;
+  margin: 0 auto;
+  padding: 0.3rem;
+  justify-content: center;
+  font-weight: 400;
+  color: orangered;
+  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.image-to-edit {
+  width: 4rem;
+  margin: 0 auto;
+  display: flex;
+}
+
+.button-to-edit {
+  background: linear-gradient(135deg, orangered, #ff4500);
+  color: #ffffff;
+  padding: 0.9rem 2.2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 14px rgba(255, 69, 0, 0.25);
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Hover effect */
+.button-to-edit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 69, 0, 0.35);
+}
+
+/* Click effect */
+.button-to-edit:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(255, 69, 0, 0.2);
+}
+
+.results {
+  background-color: #ffffff;
+  /* clean white card */
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  /* soft rounded corners */
+  max-width: 480px;
+  /* good readability on mobile */
+  margin: 2rem auto;
+  /* center on page */
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(10, 27, 42, 0.1);
+  /* subtle depth */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #0a1b2a;
+  /* dark blue-black for text */
+  line-height: 1.6;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-bottom: 3px solid gold;
+}
+
+/* Hover effect — subtle lift for premium feel */
+.results:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(10, 27, 42, 0.15);
+}
+
+/* Styling the main welcome line */
+.results p:first-child {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: orangered;
+  /* makes the user's name pop */
+}
+
+/* Styling the sub-text */
+.results p:last-child {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333333;
+}
