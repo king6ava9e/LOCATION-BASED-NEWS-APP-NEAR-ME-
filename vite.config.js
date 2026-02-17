@@ -11,8 +11,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        recieved: resolve(__dirname, 'recieved.html'),
-        dashboard: resolve(__dirname, 'main.html'),
+        recieved: resolve(__dirname, 'src/recieved.html'),
+        dashboard: resolve(__dirname, 'src/main.html'),
       }
     },
     
