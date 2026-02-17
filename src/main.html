@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+        <!--Title for the page-->
+
+    <title>Location-Based News App | NearMe News</title>
+
+    <!--Description-->
+    <meta name="description"
+        content="NearMe News is a location-aware web application that delivers personalized news using real-time geolocation data and dynamic API integration." />
+
+        <!--Author-->
+        <meta name="author" content="Acheampong Kingsley" />
+
+        <!--Keywords-->
+<meta name="keywords"
+    content="NearMe News, location-based news app, personalized news platform, geolocation news, real-time headlines, local and global news, news web application, API-driven news app, dynamic news updates" />
+
+
+<!--Icon-->
+<link rel="icon" href="/images/near-me-app-image.png" type="image/x-icon" />
+
+<!-- Twitter Card meta tags for Near-Me News Main Page -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@6ava9eking" />
+<meta name="twitter:creator" content="@6ava9eking" />
+<meta name="twitter:title" content="Near-Me News | Personalized Location-Based Headlines" />
+<meta name="twitter:description"
+    content="Explore the latest news tailored to your location. Get real-time headlines, dynamic updates, and stay informed with Near-Me News." />
+<meta name="twitter:image" content="/images/main-og-preview.jpg" />
+
+<!-- Open Graph meta tags for Near-Me News Main Page -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Near-Me News | Personalized Location-Based Headlines" />
+<meta property="og:description"
+    content="Discover news that matters to you. See real-time updates and local headlines tailored to your city and preferences." />
+<meta property="og:image" content="/images/main-og-preview.jpg" />
+<!-- Replace with your main page OG image -->
+<meta property="og:url" content="https://yourwebsite.com/main.html" />
+<!-- Replace with your actual main page URL -->
+<meta property="og:site_name" content="Near-Me News" />
+
+
+<!-- Facebook Open Graph meta tags for Near-Me News Main Page -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Near-Me News | Personalized Location-Based Headlines" />
+<meta property="og:description"
+    content="Stay up-to-date with local news and trending stories. Get headlines tailored to your city and interests in real-time." />
+<meta property="og:image" content="/images/main-og-preview.jpg" />
+<!-- Replace with main page specific OG image -->
+<meta property="og:url" content="https://yourwebsite.com/main.html" />
+<!-- Replace with actual main page URL -->
+<meta property="og:site_name" content="Near-Me News" />
+
+<!--links and styles-->
+<link rel="stylesheet" href="styles/main.css">
+
+
+
 </head>
 <body>
-    
+    <header>
+        <div><img class="header-image" src="/public/images/near-me-app-image.png" alt="near-me"></div>
+
+        <div class="header-text">Near-Me</div>
+
+        <button id="hamburger-button" class="hamburger"></button>
+    </header><br>
+
+<nav class="navigation" id="nav-bar">
+    <ul>
+        <li><a href="/index.html">Welcome Page</a></li>
+        <li><a href="#">Feed Dashboard</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="location" id="location-info"></section>
+
+    <section class="news" id="news-update"></section>
+</main>
+
+<script type="module" src="scripts/main.js"></script>    
 </body>
 </html>

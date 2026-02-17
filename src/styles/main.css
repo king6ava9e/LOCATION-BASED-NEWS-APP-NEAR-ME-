@@ -1,1 +1,164 @@
-@import "tailwindcss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header{
+    display: grid;
+    grid-template-columns: 2rem auto 1.5rem;
+    padding: 1rem;
+    border-bottom: 3px solid #5b21b6;
+    align-items: center;
+
+    @media(min-width:720px){
+        .hamburger{
+            display: none;
+        }
+
+        header{
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+        }
+
+        .header-text{
+            font-size: x-large;
+            margin: 4rem;
+        }
+        .header-image{
+            width: 4rem;
+        }
+        
+       
+    }
+    
+
+}
+
+.header-image{
+    width: 2rem;
+    /* display: block; */
+    margin: 1rem;
+
+}
+
+.header-text{
+    font-size: large;
+    margin-left: 2rem;
+    font-style: italic;
+    color: orange;
+}
+
+
+
+/* hamburger*/
+.hamburger{
+    background: none;
+        border-style: none;
+        color: #5b21b6;
+        cursor: pointer;
+}
+
+.hamburger::before{
+    content: "\2630";
+    font-size: 1.5rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 1.5rem;
+}
+
+/*Navigation*/
+.navigation{
+    display: none;
+    
+
+   
+}
+
+ @media(min-width:720px) {
+
+     .navigation {
+         display: flex;
+         justify-content: center;
+     }
+
+     
+
+ }
+
+.navigation.show{
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+
+ul{
+    display: flex;
+    gap: 2rem;
+    border-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Navigation links styling */
+.navigation ul li a {
+    text-decoration: none;
+    color: #5b21b6;
+    /* purple text */
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect */
+.navigation ul li a:hover {
+    background-color: orange;
+    /* orange background */
+    color: white;
+    /* white text on hover */
+    transform: translateY(-2px);
+}
+
+/* Optional subtle underline effect */
+.navigation ul li a::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #5b21b6;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.navigation ul li a:hover::after {
+    width: 100%;
+}
+
+/* Fade-in animation when mobile menu toggles */
+.navigation.show ul li a {
+    animation: fadeInSlide 0.4s forwards;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
