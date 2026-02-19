@@ -87,7 +87,7 @@ header {
   border-bottom: 3px solid gold;
 }
 
-/* Hover effect — subtle lift for premium feel */
+/* Hover effect — */
 .results:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 35px rgba(10, 27, 42, 0.15);

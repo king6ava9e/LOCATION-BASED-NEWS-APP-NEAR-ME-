@@ -51,9 +51,9 @@
       content="Login to Near-Me News to get personalized, location-based news and updates tailored just for you."
     />
     <meta property="og:image" content="/images/og-preview.jpg" />
-    <!-- Replace with actual app logo/banner path -->
-    <meta property="og:url" content="https://ToBeReplaced.com" />
-    <!-- Replace with actual website URL -->
+    <!--to be  replace with actual app logo/banner path -->
+    <meta property="og:url" content="https://near-me-three.vercel.app" />
+    <!-- to be replace with actual website URL -->
     <meta property="og:site_name" content="Near-Me News" />
 
     <!-- Facebook Open Graph meta tags for Near-Me News -->
@@ -67,10 +67,10 @@
       content="Login to Near-Me News to get personalized, location-based news and updates tailored just for you."
     />
     <meta property="og:image" content="/images/og-preview.jpg" />
-    <!-- Replace with actual app logo/banner path -->
-    <meta property="og:url" content="https://ToBeReplaced.com" />
-    <!-- Replace with actual website URL -->
-    <meta property="og:site_name" content="Near-Me News" />
+    <!--  with actual app logo/banner path -->
+    <meta property="og:url" content="https://near-me-three.vercel.app" />
+    <!-- with actual website URL -->
+    <meta property="og:site_name" content="https://near-me-three.vercel.app" />
 
     <!--Styles,Scripts and fonts-->
     <link rel="stylesheet" href="src/styles/index.css" />
@@ -98,11 +98,7 @@
         </p>
 
         <div>
-          <form
-            id="feedForm"
-            action="./src/recieved.html"
-            method="get"
-          >
+          <form id="feedForm" action="./src/recieved.html" method="get">
             <label for="firstname">Firstname</label>
             <input
               type="text"
@@ -118,6 +114,15 @@
               id="country"
               name="country"
               placeholder="Eg:Ghana"
+            />
+
+            <label for="city"> City</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              required
+              placeholder="Eg:Accra"
             />
 
             <button>Get Feed</button>
