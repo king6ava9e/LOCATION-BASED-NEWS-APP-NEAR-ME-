@@ -57,13 +57,13 @@
 
 <!--links and styles-->
 <link rel="stylesheet" href="styles/main.css">
-
+<script src="scripts/main.js" defer></script>
 
 
 </head>
 <body>
     <header>
-        <div><img class="header-image" src="/public/images/near-me-app-image.png" alt="near-me"></div>
+        <div><img class="header-image" src="/public/images/near-me-logo-compresed.jpeg" alt="near-me"></div>
 
         <div class="header-text">Near-Me</div>
 
@@ -78,11 +78,41 @@
 </nav>
 
 <main>
-    <section class="location" id="location-info"></section>
+    <section class="location" id="location-info">
+        <!-- <h1>Facts About Your Location</h1>
+        <div class="location-card">
 
-    <section class="news" id="news-update"></section>
+            <div class="heading">
+               
+                <img id="country-flag" src="" alt="">
+            </div>
+
+            <div class="location-text">
+
+            </div>
+
+
+        </div> -->
+
+    </section>
+
+    <section class="news" id="news-update">
+        
+        
+    </section>
 </main>
 
-<script type="module" src="scripts/main.js"></script>    
+<footer>
+    <div class="footer-text">&copy;<span id="year"></span> SoulSync Sysytems</div><br>
+
+    <div class="images">
+        <img id="youtube" class="footer-images" src="/public/images/youtube.webp" alt="Video Link">
+        <img class="footer-images" src="/public/images/instagram_original.jpeg" alt="Instagram">
+        <img class="footer-images" src="/public/images/linkdln.webp" alt="linkdln">
+        <img class="footer-images" src="/public/images/github-64.webp" alt="github-64"
+        >
+    </div>
+</footer>
+
 </body>
 </html>

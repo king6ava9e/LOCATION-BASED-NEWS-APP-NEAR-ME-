@@ -2,74 +2,128 @@
 const navButton = document.getElementById("hamburger-button");
 const navBar = document.getElementById("nav-bar");
 
-// toggle the show class on and off
 navButton.addEventListener("click", () => {
     navButton.classList.toggle("show");
     navBar.classList.toggle("show");
-})
+});
 
 
-// working with the apis
 // ----- CONFIG -----
-const geoApiKey = "d92430836eaa4bb4a6909d8e5f7d14f2";  // replace with your key
-const newsApiKey = "981c797dbefcb3003deb1f5ac3547a1c";    // replace with your key
+const geoApiKey = "d92430836eaa4bb4a6909d8e5f7d14f2";
+const newsApiKey = "3411b37a-4419-4f6e-80db-17bc2287951a";
+
 
 // ----- FETCH GEOLOCATION -----
 async function getLocation() {
     try {
+
         const response = await fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${geoApiKey}`);
         if (!response.ok) throw new Error("Geolocation fetch failed");
-        const data = await response.json();
-        console.log("Geolocation Data:", data);
-        return data;
+
+        const locationData = await response.json();
+        console.log("Geolocation Data:", locationData);
+
+        displayCountry(locationData);
+
     } catch (error) {
         console.error("Error fetching geolocation:", error);
     }
 }
 
+
 // ----- FETCH NEWS -----
-// async function getNews(countryCode) {
-//     try {
-//         // MediaStack allows filtering by country code, language, etc.
-//         const response = await fetch(`https://api.mediastack.com/v1/news?access_key=${newsApiKey}&countries=${countryCode}`);
-//         if (!response.ok) throw new Error("News fetch failed");
-//         const data = await response.json();
-//         console.log("News Data:", data);
-//     } catch (error) {
-//         console.error("Error fetching news:", error);
-//     }
-// }
 async function getNews() {
     try {
-        // Base URL without country filter for general/global news
-        const response = await fetch(`https://api.mediastack.com/v1/news?access_key=${newsApiKey}&languages=en`);
+
+        const response = await fetch(`https://content.guardianapis.com/search?api-key=${newsApiKey}`);
 
         if (!response.ok) throw new Error(`News fetch failed: ${response.status}`);
 
-        const data = await response.json();
-        console.log("All News Data:", data);
+        const newsData = await response.json();
+        console.log("All News Data:", newsData);
 
-        // Optional: preview first few articles
-        if (data.data && data.data.length > 0) {
-            data.data.slice(0, 5).forEach((article, index) => {
-                console.log(`${index + 1}. ${article.title} (${article.source})`);
-            });
-        }
+        displayNews(newsData);
+
     } catch (error) {
         console.error("Error fetching news:", error);
     }
 }
 
-// Call the function
+
+// Call the functions
 getNews();
+getLocation();
 
 
-// ----- MAIN -----
-async function init() {
-    const location = await getLocation();
-    // if (location && location.country_code2) {
-    //     await getNews(location.country_code2);
-    // }
+// getting current year
+const yearElement = document.getElementById("year");
+const currentYear = new Date().getFullYear();
+yearElement.innerHTML = currentYear;
+
+
+// ----- DISPLAY GEOLOCATION -----
+// const locationInfo = document.getElementById("location-info");
+
+// function displayCountry(locationData) {
+//     const country = document.getElementById("country-name");
+//     country.innerText = locationData.city;
+// }
+
+// ----- DISPLAY GEOLOCATION -----
+const locationInfo = document.getElementById("location-info");
+
+function displayCountry(locationData) {
+    // Remove previous card if any
+    locationInfo.innerHTML = "";
+
+    // Create a new card
+    const card = document.createElement("div");
+    card.classList.add("location-card");
+
+    card.innerHTML = `
+        <h2>Hello and welcome from ${locationData.country_name_official || locationData.country_name} 
+        (${locationData.country_name}) ${locationData.country_emoji}</h2>
+
+        <p>
+            Broadcasting from the capital city of <strong>${locationData.country_capital}</strong>,
+            ${locationData.state_prov || ""} ${locationData.district ? "" + locationData.district : ""},
+            ${locationData.continent_name}.
+        </p>
+
+        <p>
+            Stay updated with the latest headlines, all curated for you for 0 <strong>${ locationData.currency.code}</strong>.
+        </p>
+    `;
+
+    locationInfo.appendChild(card);
 }
 
-init();
+
+// ----- DISPLAY NEWS -----
+const newsContainer = document.getElementById("news-update");
+
+function displayNews(newsData) {
+    // Clear previous content
+    newsContainer.innerHTML = "";
+
+    // Loop through news results
+    newsData.response.results.forEach((article, index) => {
+        const card = document.createElement("div");
+        card.classList.add("news-card");
+        card.style.animationDelay = `${index * 100}ms`; // staggered animation
+
+        const date = new Date(article.webPublicationDate);
+        const formattedDate = date.toLocaleString();
+
+        card.innerHTML = `
+            <h3>${article.webTitle}</h3>
+            <p><strong>Section:</strong> ${article.sectionName}</p>
+            <p><strong>Type:</strong> ${article.type}</p>
+            <p><strong>Published:</strong> ${formattedDate}</p>
+            <a href="${article.webUrl}" target="_blank">Read More</a>
+        `;
+
+        newsContainer.appendChild(card);
+    });
+}
+
