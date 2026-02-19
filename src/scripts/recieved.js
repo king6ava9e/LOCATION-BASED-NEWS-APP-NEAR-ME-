@@ -7,6 +7,6 @@ const firstName = myInfo.get("firstname");
 const country = myInfo.get("country");
 
 results.innerHTML = `<p>Welcome ${firstName}!</P>
-Explore the best of News from ${country}
+Explore the best of News around the world, specifically curated for ${country}
 
 `;

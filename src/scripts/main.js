@@ -79,13 +79,13 @@ function displayCountry(locationData) {
         (${locationData.country_name}) ${locationData.country_emoji}</h2>
 
         <p>
-            Broadcasting from the capital city of <strong>${locationData.country_capital}</strong>,
+            Broadcasting from the capital city of <strong>${locationData.country_capital}</strong>!. You are now located in the 
             ${locationData.state_prov || ""} ${locationData.district ? "" + locationData.district : ""},
             ${locationData.continent_name}.
         </p>
 
         <p>
-            Stay updated with the latest headlines, all curated for you for 0 <strong>${locationData.currency.code}</strong>.
+            Stay updated with the latest headlines from around the world, all curated for you for 0 <strong>${locationData.currency.code}</strong>.
         </p>
     `;
 
