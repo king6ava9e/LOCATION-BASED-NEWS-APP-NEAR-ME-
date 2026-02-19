@@ -222,6 +222,8 @@ footer {
   #news-update {
     grid-template-columns: 1fr 1fr;
     /* 2 columns on larger screens */
+
+    
   }
 }
 
@@ -283,4 +285,11 @@ footer {
     scale: 1;
     transform: translateY(0px);
   }
+}
+
+@media (min-width:720px){
+    main{
+        max-width: 80%;
+        margin: 0 auto;
+    }
 }
